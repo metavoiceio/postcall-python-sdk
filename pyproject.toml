@@ -5,7 +5,7 @@ description = "The official Python library for the postcall API"
 dynamic = ["readme"]
 license = "Apache-2.0"
 authors = [
-{ name = "Postcall", email = "dev-feedback@postcall.com" },
+{ name = "Postcall", email = "vatsal@metavoice.io" },
 ]
 dependencies = [
     "httpx>=0.23.0, <1",
