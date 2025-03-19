@@ -733,6 +733,7 @@ class TestPostcall:
                     maybe_transform(
                         dict(
                             background_info="background_info",
+                            call_transcript="call_transcript",
                             fields_config=[
                                 {
                                     "description": "description",
@@ -740,7 +741,6 @@ class TestPostcall:
                                 }
                             ],
                             recording_url="recording_url",
-                            retell_transcript="retell_transcript",
                         ),
                         ExtractDetailCreateParams,
                     ),
@@ -764,6 +764,7 @@ class TestPostcall:
                     maybe_transform(
                         dict(
                             background_info="background_info",
+                            call_transcript="call_transcript",
                             fields_config=[
                                 {
                                     "description": "description",
@@ -771,7 +772,6 @@ class TestPostcall:
                                 }
                             ],
                             recording_url="recording_url",
-                            retell_transcript="retell_transcript",
                         ),
                         ExtractDetailCreateParams,
                     ),
@@ -810,6 +810,7 @@ class TestPostcall:
 
         response = client.extract_details.with_raw_response.create(
             background_info="background_info",
+            call_transcript="call_transcript",
             fields_config=[
                 {
                     "description": "description",
@@ -817,7 +818,6 @@ class TestPostcall:
                 }
             ],
             recording_url="recording_url",
-            retell_transcript="retell_transcript",
         )
 
         assert response.retries_taken == failures_before_success
@@ -844,6 +844,7 @@ class TestPostcall:
 
         response = client.extract_details.with_raw_response.create(
             background_info="background_info",
+            call_transcript="call_transcript",
             fields_config=[
                 {
                     "description": "description",
@@ -851,7 +852,6 @@ class TestPostcall:
                 }
             ],
             recording_url="recording_url",
-            retell_transcript="retell_transcript",
             extra_headers={"x-stainless-retry-count": Omit()},
         )
 
@@ -878,6 +878,7 @@ class TestPostcall:
 
         response = client.extract_details.with_raw_response.create(
             background_info="background_info",
+            call_transcript="call_transcript",
             fields_config=[
                 {
                     "description": "description",
@@ -885,7 +886,6 @@ class TestPostcall:
                 }
             ],
             recording_url="recording_url",
-            retell_transcript="retell_transcript",
             extra_headers={"x-stainless-retry-count": "42"},
         )
 
@@ -1582,6 +1582,7 @@ class TestAsyncPostcall:
                     maybe_transform(
                         dict(
                             background_info="background_info",
+                            call_transcript="call_transcript",
                             fields_config=[
                                 {
                                     "description": "description",
@@ -1589,7 +1590,6 @@ class TestAsyncPostcall:
                                 }
                             ],
                             recording_url="recording_url",
-                            retell_transcript="retell_transcript",
                         ),
                         ExtractDetailCreateParams,
                     ),
@@ -1613,6 +1613,7 @@ class TestAsyncPostcall:
                     maybe_transform(
                         dict(
                             background_info="background_info",
+                            call_transcript="call_transcript",
                             fields_config=[
                                 {
                                     "description": "description",
@@ -1620,7 +1621,6 @@ class TestAsyncPostcall:
                                 }
                             ],
                             recording_url="recording_url",
-                            retell_transcript="retell_transcript",
                         ),
                         ExtractDetailCreateParams,
                     ),
@@ -1660,6 +1660,7 @@ class TestAsyncPostcall:
 
         response = await client.extract_details.with_raw_response.create(
             background_info="background_info",
+            call_transcript="call_transcript",
             fields_config=[
                 {
                     "description": "description",
@@ -1667,7 +1668,6 @@ class TestAsyncPostcall:
                 }
             ],
             recording_url="recording_url",
-            retell_transcript="retell_transcript",
         )
 
         assert response.retries_taken == failures_before_success
@@ -1695,6 +1695,7 @@ class TestAsyncPostcall:
 
         response = await client.extract_details.with_raw_response.create(
             background_info="background_info",
+            call_transcript="call_transcript",
             fields_config=[
                 {
                     "description": "description",
@@ -1702,7 +1703,6 @@ class TestAsyncPostcall:
                 }
             ],
             recording_url="recording_url",
-            retell_transcript="retell_transcript",
             extra_headers={"x-stainless-retry-count": Omit()},
         )
 
@@ -1730,6 +1730,7 @@ class TestAsyncPostcall:
 
         response = await client.extract_details.with_raw_response.create(
             background_info="background_info",
+            call_transcript="call_transcript",
             fields_config=[
                 {
                     "description": "description",
@@ -1737,7 +1738,6 @@ class TestAsyncPostcall:
                 }
             ],
             recording_url="recording_url",
-            retell_transcript="retell_transcript",
             extra_headers={"x-stainless-retry-count": "42"},
         )
 
