@@ -15,6 +15,9 @@ class ExtractDetailCreateParams(TypedDict, total=False):
     (e.g. information about the business).
     """
 
+    call_transcript: Required[str]
+    """A string representing transcript of the call."""
+
     fields_config: Required[Iterable[FieldsConfig]]
     """
     List of field configuration objects specifying what to extract from the
@@ -23,9 +26,6 @@ class ExtractDetailCreateParams(TypedDict, total=False):
 
     recording_url: Required[str]
     """URL to the audio file of the call."""
-
-    retell_transcript: Required[str]
-    """A string representing transcript of the call."""
 
 
 class FieldsConfig(TypedDict, total=False):

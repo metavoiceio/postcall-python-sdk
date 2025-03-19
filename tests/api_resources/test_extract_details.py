@@ -21,6 +21,7 @@ class TestExtractDetails:
     def test_method_create(self, client: Postcall) -> None:
         extract_detail = client.extract_details.create(
             background_info="background_info",
+            call_transcript="call_transcript",
             fields_config=[
                 {
                     "description": "description",
@@ -28,7 +29,6 @@ class TestExtractDetails:
                 }
             ],
             recording_url="recording_url",
-            retell_transcript="retell_transcript",
         )
         assert_matches_type(object, extract_detail, path=["response"])
 
@@ -37,6 +37,7 @@ class TestExtractDetails:
     def test_raw_response_create(self, client: Postcall) -> None:
         response = client.extract_details.with_raw_response.create(
             background_info="background_info",
+            call_transcript="call_transcript",
             fields_config=[
                 {
                     "description": "description",
@@ -44,7 +45,6 @@ class TestExtractDetails:
                 }
             ],
             recording_url="recording_url",
-            retell_transcript="retell_transcript",
         )
 
         assert response.is_closed is True
@@ -57,6 +57,7 @@ class TestExtractDetails:
     def test_streaming_response_create(self, client: Postcall) -> None:
         with client.extract_details.with_streaming_response.create(
             background_info="background_info",
+            call_transcript="call_transcript",
             fields_config=[
                 {
                     "description": "description",
@@ -64,7 +65,6 @@ class TestExtractDetails:
                 }
             ],
             recording_url="recording_url",
-            retell_transcript="retell_transcript",
         ) as response:
             assert not response.is_closed
             assert response.http_request.headers.get("X-Stainless-Lang") == "python"
@@ -83,6 +83,7 @@ class TestAsyncExtractDetails:
     async def test_method_create(self, async_client: AsyncPostcall) -> None:
         extract_detail = await async_client.extract_details.create(
             background_info="background_info",
+            call_transcript="call_transcript",
             fields_config=[
                 {
                     "description": "description",
@@ -90,7 +91,6 @@ class TestAsyncExtractDetails:
                 }
             ],
             recording_url="recording_url",
-            retell_transcript="retell_transcript",
         )
         assert_matches_type(object, extract_detail, path=["response"])
 
@@ -99,6 +99,7 @@ class TestAsyncExtractDetails:
     async def test_raw_response_create(self, async_client: AsyncPostcall) -> None:
         response = await async_client.extract_details.with_raw_response.create(
             background_info="background_info",
+            call_transcript="call_transcript",
             fields_config=[
                 {
                     "description": "description",
@@ -106,7 +107,6 @@ class TestAsyncExtractDetails:
                 }
             ],
             recording_url="recording_url",
-            retell_transcript="retell_transcript",
         )
 
         assert response.is_closed is True
@@ -119,6 +119,7 @@ class TestAsyncExtractDetails:
     async def test_streaming_response_create(self, async_client: AsyncPostcall) -> None:
         async with async_client.extract_details.with_streaming_response.create(
             background_info="background_info",
+            call_transcript="call_transcript",
             fields_config=[
                 {
                     "description": "description",
@@ -126,7 +127,6 @@ class TestAsyncExtractDetails:
                 }
             ],
             recording_url="recording_url",
-            retell_transcript="retell_transcript",
         ) as response:
             assert not response.is_closed
             assert response.http_request.headers.get("X-Stainless-Lang") == "python"
