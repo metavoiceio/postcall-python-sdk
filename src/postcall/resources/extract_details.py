@@ -60,9 +60,23 @@ class ExtractDetailsResource(SyncAPIResource):
         timeout: float | httpx.Timeout | None | NotGiven = NOT_GIVEN,
     ) -> object:
         """
-        Extract Details
+        Given a recording URL, a transcript, some background information, and a list of
+        field configurations, this endpoint will:
+
+        return a dictionary of extracted details according to the provided
+        `fields_config`.
 
         Args:
+          background_info: Additional context that helps guide what should be extracted from the transcript
+              (e.g. information about the business).
+
+          fields_config: List of field configuration objects specifying what to extract from the
+              transcript.
+
+          recording_url: URL to the audio file of the call.
+
+          retell_transcript: A string representing transcript of the call.
+
           extra_headers: Send extra headers
 
           extra_query: Add additional query parameters to the request
@@ -124,9 +138,23 @@ class AsyncExtractDetailsResource(AsyncAPIResource):
         timeout: float | httpx.Timeout | None | NotGiven = NOT_GIVEN,
     ) -> object:
         """
-        Extract Details
+        Given a recording URL, a transcript, some background information, and a list of
+        field configurations, this endpoint will:
+
+        return a dictionary of extracted details according to the provided
+        `fields_config`.
 
         Args:
+          background_info: Additional context that helps guide what should be extracted from the transcript
+              (e.g. information about the business).
+
+          fields_config: List of field configuration objects specifying what to extract from the
+              transcript.
+
+          recording_url: URL to the audio file of the call.
+
+          retell_transcript: A string representing transcript of the call.
+
           extra_headers: Send extra headers
 
           extra_query: Add additional query parameters to the request
