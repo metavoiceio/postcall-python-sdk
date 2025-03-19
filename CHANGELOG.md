@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.1.0-alpha.2 (2025-03-19)
+
+Full Changelog: [v0.1.0-alpha.1...v0.1.0-alpha.2](https://github.com/metavoiceio/postcall-python-sdk/compare/v0.1.0-alpha.1...v0.1.0-alpha.2)
+
+### Features
+
+* **api:** update via SDK Studio ([#8](https://github.com/metavoiceio/postcall-python-sdk/issues/8)) ([8b9b40a](https://github.com/metavoiceio/postcall-python-sdk/commit/8b9b40a95c95e84363d0bbb71fb9410df03890ec))
+
 ## 0.1.0-alpha.1 (2025-03-19)
 
 Full Changelog: [v0.0.1-alpha.1...v0.1.0-alpha.1](https://github.com/metavoiceio/postcall-python-sdk/compare/v0.0.1-alpha.1...v0.1.0-alpha.1)
