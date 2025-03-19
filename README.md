@@ -33,6 +33,7 @@ client = Postcall(
 
 extract_detail = client.extract_details.create(
     background_info="background_info",
+    call_transcript="call_transcript",
     fields_config=[
         {
             "description": "description",
@@ -40,7 +41,6 @@ extract_detail = client.extract_details.create(
         }
     ],
     recording_url="recording_url",
-    retell_transcript="retell_transcript",
 )
 ```
 
@@ -66,6 +66,7 @@ client = AsyncPostcall(
 async def main() -> None:
     extract_detail = await client.extract_details.create(
         background_info="background_info",
+        call_transcript="call_transcript",
         fields_config=[
             {
                 "description": "description",
@@ -73,7 +74,6 @@ async def main() -> None:
             }
         ],
         recording_url="recording_url",
-        retell_transcript="retell_transcript",
     )
 
 
@@ -109,6 +109,7 @@ client = Postcall()
 try:
     client.extract_details.create(
         background_info="background_info",
+        call_transcript="call_transcript",
         fields_config=[
             {
                 "description": "description",
@@ -116,7 +117,6 @@ try:
             }
         ],
         recording_url="recording_url",
-        retell_transcript="retell_transcript",
     )
 except postcall.APIConnectionError as e:
     print("The server could not be reached")
@@ -162,6 +162,7 @@ client = Postcall(
 # Or, configure per-request:
 client.with_options(max_retries=5).extract_details.create(
     background_info="background_info",
+    call_transcript="call_transcript",
     fields_config=[
         {
             "description": "description",
@@ -169,7 +170,6 @@ client.with_options(max_retries=5).extract_details.create(
         }
     ],
     recording_url="recording_url",
-    retell_transcript="retell_transcript",
 )
 ```
 
@@ -195,6 +195,7 @@ client = Postcall(
 # Override per-request:
 client.with_options(timeout=5.0).extract_details.create(
     background_info="background_info",
+    call_transcript="call_transcript",
     fields_config=[
         {
             "description": "description",
@@ -202,7 +203,6 @@ client.with_options(timeout=5.0).extract_details.create(
         }
     ],
     recording_url="recording_url",
-    retell_transcript="retell_transcript",
 )
 ```
 
@@ -246,12 +246,12 @@ from postcall import Postcall
 client = Postcall()
 response = client.extract_details.with_raw_response.create(
     background_info="background_info",
+    call_transcript="call_transcript",
     fields_config=[{
         "description": "description",
         "name": "name",
     }],
     recording_url="recording_url",
-    retell_transcript="retell_transcript",
 )
 print(response.headers.get('X-My-Header'))
 
@@ -272,6 +272,7 @@ To stream the response body, use `.with_streaming_response` instead, which requi
 ```python
 with client.extract_details.with_streaming_response.create(
     background_info="background_info",
+    call_transcript="call_transcript",
     fields_config=[
         {
             "description": "description",
@@ -279,7 +280,6 @@ with client.extract_details.with_streaming_response.create(
         }
     ],
     recording_url="recording_url",
-    retell_transcript="retell_transcript",
 ) as response:
     print(response.headers.get("X-My-Header"))
 
