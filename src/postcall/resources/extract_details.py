@@ -49,9 +49,9 @@ class ExtractDetailsResource(SyncAPIResource):
         self,
         *,
         background_info: str,
+        call_transcript: str,
         fields_config: Iterable[extract_detail_create_params.FieldsConfig],
         recording_url: str,
-        retell_transcript: str,
         # Use the following arguments if you need to pass additional parameters to the API that aren't available via kwargs.
         # The extra values given here take precedence over values defined on the client or passed to this method.
         extra_headers: Headers | None = None,
@@ -70,12 +70,12 @@ class ExtractDetailsResource(SyncAPIResource):
           background_info: Additional context that helps guide what should be extracted from the transcript
               (e.g. information about the business).
 
+          call_transcript: A string representing transcript of the call.
+
           fields_config: List of field configuration objects specifying what to extract from the
               transcript.
 
           recording_url: URL to the audio file of the call.
-
-          retell_transcript: A string representing transcript of the call.
 
           extra_headers: Send extra headers
 
@@ -90,9 +90,9 @@ class ExtractDetailsResource(SyncAPIResource):
             body=maybe_transform(
                 {
                     "background_info": background_info,
+                    "call_transcript": call_transcript,
                     "fields_config": fields_config,
                     "recording_url": recording_url,
-                    "retell_transcript": retell_transcript,
                 },
                 extract_detail_create_params.ExtractDetailCreateParams,
             ),
@@ -127,9 +127,9 @@ class AsyncExtractDetailsResource(AsyncAPIResource):
         self,
         *,
         background_info: str,
+        call_transcript: str,
         fields_config: Iterable[extract_detail_create_params.FieldsConfig],
         recording_url: str,
-        retell_transcript: str,
         # Use the following arguments if you need to pass additional parameters to the API that aren't available via kwargs.
         # The extra values given here take precedence over values defined on the client or passed to this method.
         extra_headers: Headers | None = None,
@@ -148,12 +148,12 @@ class AsyncExtractDetailsResource(AsyncAPIResource):
           background_info: Additional context that helps guide what should be extracted from the transcript
               (e.g. information about the business).
 
+          call_transcript: A string representing transcript of the call.
+
           fields_config: List of field configuration objects specifying what to extract from the
               transcript.
 
           recording_url: URL to the audio file of the call.
-
-          retell_transcript: A string representing transcript of the call.
 
           extra_headers: Send extra headers
 
@@ -168,9 +168,9 @@ class AsyncExtractDetailsResource(AsyncAPIResource):
             body=await async_maybe_transform(
                 {
                     "background_info": background_info,
+                    "call_transcript": call_transcript,
                     "fields_config": fields_config,
                     "recording_url": recording_url,
-                    "retell_transcript": retell_transcript,
                 },
                 extract_detail_create_params.ExtractDetailCreateParams,
             ),
