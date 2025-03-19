@@ -20,7 +20,7 @@ or products provided by Postcall please follow the respective company's security
 
 ### Postcall Terms and Policies
 
-Please contact dev-feedback@postcall.com for any questions or concerns regarding security of our services.
+Please contact vatsal@metavoice.io for any questions or concerns regarding security of our services.
 
 ---
 

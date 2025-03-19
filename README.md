@@ -10,7 +10,7 @@ It is generated with [Stainless](https://www.stainless.com/).
 
 ## Documentation
 
-The REST API documentation can be found on [docs.postcall.com](https://docs.postcall.com). The full API of this library can be found in [api.md](api.md).
+The REST API documentation can be found on [www.metavoice.io](https://www.metavoice.io). The full API of this library can be found in [api.md](api.md).
 
 ## Installation
 
