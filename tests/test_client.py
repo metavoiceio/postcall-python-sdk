@@ -1755,7 +1755,7 @@ class TestAsyncPostcall:
         import threading
 
         from postcall._utils import asyncify
-        from postcall._base_client import get_platform 
+        from postcall._base_client import get_platform
 
         async def test_main() -> None:
             result = await asyncify(get_platform)()
