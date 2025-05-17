@@ -1,2 +1,4 @@
 configured_endpoints: 1
 openapi_spec_url: https://storage.googleapis.com/stainless-sdk-openapi-specs/metavoice-labs-inc%2Fpostcall-e73c3ee8a697d595fd64419862b18b9a93abd48bff0dd99fa8b2d5de24ef52ce.yml
+openapi_spec_hash: a54ece3ef322a18116138761d38e933d
+config_hash: ca6003299c6b8fe023366b454a4d2743
